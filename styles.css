@@ -1,4 +1,4 @@
-/* General Styles */
+/* Dark gradient background */
 body {
     font-family: 'Poppins', sans-serif;
     background: radial-gradient(circle at center, #0f0f10, #090909);
@@ -13,14 +13,14 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 60px;
+    padding: 25px 80px;  /* Increased padding */
     background: rgba(15, 15, 15, 0.8);
-    backdrop-filter: blur(10px);
-    border-bottom: 2px dashed rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    border-bottom: 3px dashed rgba(255, 255, 255, 0.3);
 }
 
 nav .logo {
-    font-size: 28px;
+    font-size: 32px; /* Bigger logo */
     font-weight: bold;
     text-transform: uppercase;
     color: #71c0ff;
@@ -29,35 +29,32 @@ nav .logo {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 25px;
-}
-
-nav ul li {
-    display: inline;
+    gap: 30px; /* Increased spacing */
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
-    font-weight: 500;
+    font-size: 20px; /* Bigger text */
+    font-weight: 600;
+    padding: 12px 20px; /* Bigger clickable area */
+    border-radius: 8px;
     transition: 0.3s;
-    padding: 10px 18px;
-    border-radius: 6px;
 }
 
 nav ul li a:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
 }
 
 /* Hero Section */
 header {
     text-align: center;
-    padding: 100px 20px;
-    border-bottom: 2px dashed rgba(255, 255, 255, 0.2);
+    padding: 120px 40px; /* More padding */
+    border-bottom: 3px dashed rgba(255, 255, 255, 0.3);
 }
 
 .hero-content h1 {
-    font-size: 60px;
+    font-size: 64px; /* Larger headline */
     font-weight: bold;
     background: linear-gradient(90deg, #71c0ff, #a67eff);
     -webkit-background-clip: text;
@@ -65,30 +62,21 @@ header {
 }
 
 .hero-content p {
-    font-size: 22px;
+    font-size: 22px; /* Bigger text */
     opacity: 0.85;
-}
-
-/* Who We Are Section */
-.who-we-are {
-    text-align: center;
-    padding: 150px 80px; /* Increased padding */
-    max-width: 1200px;
+    max-width: 800px;
     margin: auto;
 }
 
-.who-we-are h2 {
-    font-size: 50px; /* Larger title */
-    color: #71c0ff;
-    font-weight: bold;
-    margin-bottom: 25px;
+/* Section Styles */
+section {
+    text-align: center;
+    padding: 80px 40px; /* More spacing */
+    border-bottom: 3px dashed rgba(255, 255, 255, 0.3);
 }
 
-.who-we-are p {
-    font-size: 24px; /* Bigger text */
-    line-height: 1.8;
-    opacity: 0.9;
-    max-width: 900px;
+.container {
+    max-width: 1100px; /* Bigger content width */
     margin: auto;
 }
 
@@ -96,48 +84,49 @@ header {
 .stats-grid {
     display: flex;
     justify-content: center;
-    gap: 80px;
+    gap: 60px; /* More spacing */
     margin-top: 40px;
 }
 
 .stat {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 30px;
-    border-radius: 12px;
-    border: 2px dashed rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.08);
+    padding: 40px; /* Bigger box */
+    border-radius: 15px;
+    border: 3px dashed rgba(255, 255, 255, 0.4);
     transition: transform 0.3s;
-    width: 280px; /* Bigger boxes */
+    width: 300px; /* Make sure it's large */
 }
 
 .stat:hover {
-    transform: scale(1.08);
+    transform: scale(1.07);
 }
 
 .stat h3 {
-    font-size: 40px; /* Bigger numbers */
+    font-size: 36px; /* Bigger headings */
     color: #71c0ff;
 }
 
 .stat p {
-    font-size: 18px;
-    opacity: 0.8;
+    font-size: 28px; /* Bigger numbers */
+    font-weight: bold;
+    opacity: 0.9;
 }
 
-/* Games Section */
+/* Game Section */
 .games-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Bigger game cards */
+    gap: 30px;
     margin-top: 50px;
 }
 
 .game {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
     overflow: hidden;
     cursor: pointer;
     transition: 0.3s;
-    border: 2px dashed rgba(255, 255, 255, 0.3);
+    border: 3px dashed rgba(255, 255, 255, 0.4);
 }
 
 .game:hover {
@@ -146,61 +135,64 @@ header {
 
 .game img {
     width: 100%;
-    height: 180px;
+    height: 200px; /* Bigger images */
     object-fit: cover;
 }
 
 .game-info {
-    padding: 18px;
+    padding: 20px;
 }
 
 .game-info h3 {
-    font-size: 22px;
+    font-size: 24px; /* Bigger titles */
     color: #71c0ff;
 }
 
 .game-info p {
-    font-size: 16px;
-    opacity: 0.75;
+    font-size: 18px;
+    opacity: 0.8;
 }
 
 /* Contact Section */
 button {
-    padding: 14px 28px;
-    background: rgba(113, 192, 255, 0.2);
-    border: 2px dashed #71c0ff;
+    padding: 16px 32px; /* Bigger buttons */
+    background: rgba(113, 192, 255, 0.3);
+    border: 3px dashed #71c0ff;
     color: white;
-    font-size: 18px;
+    font-size: 20px; /* Bigger text */
+    font-weight: bold;
     cursor: pointer;
-    border-radius: 6px;
+    border-radius: 10px;
     transition: 0.3s;
 }
 
 button:hover {
-    background: rgba(113, 192, 255, 0.4);
+    background: rgba(113, 192, 255, 0.5);
     transform: scale(1.08);
 }
 
 /* Floating Buttons */
 .floating-buttons {
     position: fixed;
-    bottom: 25px;
-    right: 25px;
+    bottom: 30px;
+    right: 30px;
     display: flex;
-    gap: 12px;
+    gap: 15px; /* Bigger spacing */
 }
 
 .floating-buttons a {
     text-decoration: none;
     color: white;
-    padding: 14px 22px;
-    background: rgba(113, 192, 255, 0.2);
-    border-radius: 6px;
+    padding: 16px 28px; /* Bigger buttons */
+    background: rgba(113, 192, 255, 0.3);
+    border-radius: 8px;
+    font-size: 18px;
     transition: 0.3s;
 }
 
 .floating-buttons a:hover {
-    background: rgba(113, 192, 255, 0.4);
+    background: rgba(113, 192, 255, 0.5);
+    transform: scale(1.08);
 }
 
 /* Responsive */
@@ -208,11 +200,12 @@ button:hover {
     nav {
         flex-direction: column;
         text-align: center;
+        padding: 30px;
     }
 
     nav ul {
         flex-direction: column;
-        padding-top: 12px;
+        padding-top: 15px;
     }
 
     .stats-grid {
@@ -224,15 +217,15 @@ button:hover {
         grid-template-columns: 1fr;
     }
 
-    .who-we-are {
-        padding: 100px 40px; /* Adjusted for mobile */
+    .stat {
+        width: 100%;
     }
 
-    .who-we-are h2 {
-        font-size: 38px;
+    .hero-content h1 {
+        font-size: 48px; /* Adjusted for mobile */
     }
 
-    .who-we-are p {
+    .hero-content p {
         font-size: 20px;
     }
 }
