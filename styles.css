@@ -1,30 +1,35 @@
-/* GENERAL STYLING */
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #121212; /* Dark theme */
-    color: #E0E0E0;
+/* GENERAL RESET */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #0d0d0d; /* Deep black */
+    color: #e0e0e0; /* Soft white */
     text-align: center;
 }
 
-/* NAVIGATION BAR */
+/* NAVBAR (Fixing That Mess 💀) */
 nav {
     display: flex;
     justify-content: center;
-    padding: 15px 0;
-    background-color: rgba(20, 20, 20, 0.8);
+    gap: 30px;
+    padding: 20px 0;
+    background: rgba(20, 20, 20, 0.9);
     position: fixed;
     width: 100%;
     top: 0;
-    left: 0;
+    z-index: 999;
     backdrop-filter: blur(10px);
 }
 
 nav a {
-    color: #00BFFF; /* Soft cyan blue */
     text-decoration: none;
-    margin: 0 20px;
+    color: #00bcd4; /* Cool cyan */
+    font-size: 16px;
     font-weight: 600;
     transition: color 0.3s ease-in-out;
 }
@@ -35,20 +40,20 @@ nav a:hover {
 
 /* SECTION HEADINGS */
 h2 {
-    font-size: 26px;
+    font-size: 28px;
     font-weight: 700;
-    margin-top: 100px;
-    color: #00BFFF; /* Soft cyan */
+    margin: 80px 0 20px;
+    color: #00bcd4; /* Cyan accent */
 }
 
 /* WHO WE ARE SECTION */
 .about-container {
     max-width: 800px;
-    margin: 40px auto;
+    margin: auto;
     background: rgba(30, 30, 30, 0.8);
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0px 0px 15px rgba(0, 191, 255, 0.3);
+    box-shadow: 0px 0px 15px rgba(0, 188, 212, 0.3);
 }
 
 /* STATS SECTION */
@@ -71,12 +76,12 @@ h2 {
 
 .stat-box:hover {
     transform: translateY(-5px);
-    box-shadow: 0px 0px 20px rgba(0, 191, 255, 0.5);
+    box-shadow: 0px 0px 20px rgba(0, 188, 212, 0.5);
 }
 
 .stat-box h3 {
     font-size: 22px;
-    color: #00BFFF;
+    color: #00bcd4;
     font-weight: bold;
 }
 
@@ -85,7 +90,7 @@ h2 {
     color: #bbb;
 }
 
-/* OUR GAMES SECTION */
+/* OUR GAMES (Horizontal & Not Ugly Now 💀) */
 .games-list {
     display: flex;
     justify-content: center;
@@ -96,9 +101,6 @@ h2 {
 
 /* GAME CARDS */
 .game {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     background: rgba(30, 30, 30, 0.8);
     padding: 15px;
     border-radius: 12px;
@@ -107,12 +109,11 @@ h2 {
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     cursor: pointer;
-    overflow: hidden;
 }
 
 .game:hover {
     transform: translateY(-5px);
-    box-shadow: 0px 0px 20px rgba(0, 191, 255, 0.5);
+    box-shadow: 0px 0px 20px rgba(0, 188, 212, 0.5);
 }
 
 /* GAME IMAGE */
@@ -127,7 +128,7 @@ h2 {
 /* GAME INFO */
 .game-info h3 {
     font-size: 16px;
-    color: #00BFFF;
+    color: #00bcd4;
     font-weight: bold;
     margin-bottom: 5px;
 }
@@ -135,22 +136,4 @@ h2 {
 .game-info p {
     font-size: 13px;
     color: #bbb;
-}
-
-/* CONTACT BUTTON */
-.contact-button {
-    background: #00BFFF;
-    color: black;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
-    margin-top: 20px;
-}
-
-.contact-button:hover {
-    background: #0080FF;
 }
