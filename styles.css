@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Mono', monospace;
     scroll-behavior: smooth;
 }
 
@@ -28,15 +28,16 @@ nav {
 }
 
 .logo {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 22px;
+    font-weight: 700;
     color: #00bcd4;
+    font-family: 'Montserrat', sans-serif;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 25px;
+    gap: 30px;
 }
 
 nav ul li {
@@ -48,12 +49,13 @@ nav ul li a {
     color: #00bcd4;
     font-size: 16px;
     font-weight: 600;
-    padding: 5px 10px;
+    padding: 6px 12px;
     border-radius: 5px;
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    font-family: 'Montserrat', sans-serif;
 }
 
-/* ✨ Smooth hover effect instead of underline */
+/* Remove underlight, add soft highlight */
 nav ul li a:hover {
     background: rgba(0, 188, 212, 0.2);
     color: #ffffff;
@@ -62,128 +64,68 @@ nav ul li a:hover {
 /* HERO SECTION */
 header {
     background: url('your-header-bg.jpg') no-repeat center center/cover;
-    height: 300px;
+    height: 350px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-top: 60px;
+    margin-top: 70px;
+}
+
+/* HERO TEXT */
+.hero-content {
+    max-width: 800px;
 }
 
 .hero-content h1 {
-    font-size: 32px;
-    font-weight: 700;
+    font-size: 38px;
+    font-weight: 800;
     color: #00bcd4;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .hero-content p {
-    font-size: 16px;
-    color: #ccc;
+    font-size: 18px;
+    color: #bbbbbb;
+    font-weight: 500;
+    margin-top: 10px;
+    font-family: 'Roboto Mono', monospace;
 }
 
 /* SECTIONS */
 section {
-    padding: 80px 10%;
+    padding: 90px 10%;
     min-height: 400px;
 }
 
+/* CONTENT BOX */
 .container {
-    max-width: 800px;
+    max-width: 850px;
     margin: auto;
-    background: rgba(30, 30, 30, 0.8);
-    padding: 20px;
-    border-radius: 12px;
+    background: rgba(30, 30, 30, 0.9);
+    padding: 25px;
+    border-radius: 14px;
     box-shadow: 0px 4px 15px rgba(0, 188, 212, 0.2);
 }
 
+/* HEADINGS */
 h2 {
-    font-size: 28px;
-    font-weight: 700;
+    font-size: 30px;
+    font-weight: 800;
     margin-bottom: 20px;
     color: #00bcd4;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
 }
 
-/* STATS */
-.stats-grid {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-
-.stat {
-    background: rgba(20, 20, 20, 0.8);
-    padding: 20px;
-    border-radius: 12px;
-    min-width: 200px;
-    text-align: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.stat:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 0px 20px rgba(0, 188, 212, 0.4);
-}
-
-.stat h3 {
-    font-size: 22px;
-    color: #00bcd4;
-    font-weight: bold;
-}
-
-.stat p {
-    font-size: 14px;
-    color: #bbb;
-}
-
-/* GAMES LIST */
-.games-list {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-/* GAME CARDS */
-.game {
-    background: rgba(30, 30, 30, 0.9);
-    padding: 15px;
-    border-radius: 12px;
-    width: 220px;
-    text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 188, 212, 0.15);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    cursor: pointer;
-}
-
-/* ✨ Subtle hover animation */
-.game:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 4px 20px rgba(0, 188, 212, 0.3);
-}
-
-/* GAME IMAGE */
-.game img {
-    width: 160px;
-    height: 160px;
-    border-radius: 10px;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-
-/* GAME INFO */
-.game-info h3 {
+/* BODY TEXT */
+p {
     font-size: 16px;
-    color: #00bcd4;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.game-info p {
-    font-size: 13px;
-    color: #bbb;
+    line-height: 1.6;
+    color: #ccc;
+    font-family: 'Roboto Mono', monospace;
 }
 
 /* CONTACT BUTTON */
@@ -197,9 +139,10 @@ button {
     border-radius: 6px;
     cursor: pointer;
     transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    font-family: 'Montserrat', sans-serif;
 }
 
-/* ✨ Button now has a slight pop effect */
+/* Button slight hover pop effect */
 button:hover {
     background: #0097a7;
     transform: scale(1.05);
