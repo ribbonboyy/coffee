@@ -19,7 +19,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(10, 10, 10, 0.9);
+    background: rgba(15, 15, 15, 0.95);
     backdrop-filter: blur(10px);
     padding: 15px 50px;
     position: fixed;
@@ -30,7 +30,7 @@ nav {
 }
 
 nav:hover {
-    background: rgba(20, 20, 20, 0.95);
+    background: rgba(30, 30, 30, 0.95);
 }
 
 nav .logo {
@@ -43,7 +43,7 @@ nav .logo {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
 }
 
 nav ul li {
@@ -56,95 +56,90 @@ nav ul li a {
     font-family: 'Roboto Mono', monospace;
     font-size: 16px;
     transition: 0.3s;
-    position: relative;
-    padding: 5px;
-}
-
-nav ul li a::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -3px;
-    width: 0;
-    height: 2px;
-    background: #e63946;
-    transition: width 0.3s ease, left 0.3s ease;
-}
-
-nav ul li a:hover::after {
-    width: 100%;
-    left: 0;
+    padding: 8px 12px;
+    border-radius: 5px;
 }
 
 nav ul li a:hover {
-    color: #e63946;
+    background: #e63946;
 }
 
 /* Hero Section */
 header {
-    padding: 120px 20px;
-    margin-top: 60px;
-    animation: fadeInUp 1s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    background: linear-gradient(135deg, #1a1a1a, #0a0a0a);
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content {
+    max-width: 600px;
 }
 
 header h1 {
-    font-size: 38px;
+    font-size: 42px;
     font-weight: bold;
-    letter-spacing: 1px;
-    text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.3);
+    text-shadow: 3px 3px 10px rgba(255, 0, 0, 0.3);
 }
 
 header p {
     font-size: 18px;
     color: #bbb;
-    opacity: 0.8;
+    margin-top: 10px;
 }
 
-/* Sections */
+/* General Section Formatting */
 section {
     padding: 80px 20px;
 }
 
-/* About Us */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 h2 {
     font-size: 28px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     color: #e63946;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 /* Stats */
-.stats-container {
+.stats-grid {
     display: flex;
     justify-content: center;
     gap: 40px;
-    margin-top: 20px;
+    margin-top: 30px;
     flex-wrap: wrap;
 }
 
 .stat {
     background: rgba(30, 30, 30, 0.8);
     backdrop-filter: blur(10px);
-    padding: 20px;
-    border-radius: 10px;
-    width: 220px;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    padding: 25px;
+    border-radius: 12px;
+    width: 250px;
+    box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.1);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .stat:hover {
     transform: scale(1.05);
-    box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.5);
+    box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.5);
 }
 
 .stat h3 {
-    font-size: 26px;
+    font-size: 28px;
     color: #ffcc00;
 }
 
 .stat p {
-    font-size: 14px;
+    font-size: 16px;
     color: #ddd;
 }
 
@@ -152,44 +147,18 @@ h2 {
 button {
     background: linear-gradient(135deg, #e63946, #ff6b6b);
     color: white;
-    font-size: 16px;
-    padding: 12px 25px;
+    font-size: 18px;
+    padding: 15px 30px;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
     transition: 0.3s;
     position: relative;
     overflow: hidden;
-}
-
-button::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.2);
-    top: 0;
-    left: -100%;
-    transition: left 0.3s;
-}
-
-button:hover::before {
-    left: 100%;
+    margin-top: 10px;
 }
 
 button:hover {
     transform: scale(1.05);
     background: linear-gradient(135deg, #ff4747, #ff8b8b);
-}
-
-/* Animations */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
