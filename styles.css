@@ -102,57 +102,62 @@ section {
 
 /* Stats Section */
 #stats h2 {
-    font-size: 2rem; /* Made Bigger */
-    margin-bottom: 15px;
+    font-size: 2.5rem; /* Bigger */
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .stats-grid {
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 30px;
     flex-wrap: wrap;
     margin-top: 20px;
 }
 
 .stat {
     background: #222;
-    padding: 20px;
-    border-radius: 10px;
-    min-width: 200px;
+    padding: 25px;
+    border-radius: 12px;
+    min-width: 240px;
     border: 2px dashed #ffcc00;
     position: relative;
     text-align: center;
-    overflow: hidden; /* Prevents the shine effect from overflowing */
+    overflow: hidden;
     transition: transform 0.3s ease-in-out;
 }
 
 .stat h3 {
-    font-size: 2rem; /* Bigger */
-    color: #ffcc00;
+    font-size: 2.5rem; /* Bigger */
+    color: #ffffff;
+    font-weight: bold;
 }
 
 .stat p {
-    font-size: 1.2rem; /* Bigger */
+    font-size: 1.3rem;
+    color: #ddd;
 }
 
-/* Shine Effect on Hover */
+/* Diagonal White Shine Effect on Hover */
 .stat::after {
     content: "";
     position: absolute;
-    top: 50%;
+    top: -100%;
     left: -100%;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(to right, transparent, #ffcc00, transparent);
-    transition: left 0.4s ease-in-out;
+    width: 200%;
+    height: 5px; /* Fatter Line */
+    background: linear-gradient(to right, transparent, white, transparent);
+    transform: rotate(-20deg);
+    transition: top 0.4s ease-in-out, left 0.4s ease-in-out;
 }
 
 .stat:hover::after {
-    left: 100%;
+    top: 120%;
+    left: 120%;
 }
 
 .stat:hover {
-    transform: scale(1.08);
+    transform: scale(1.1);
 }
 
 /* Games Section */
