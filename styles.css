@@ -1,149 +1,145 @@
-/* RESET STYLES */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto Mono', monospace;
-    scroll-behavior: smooth;
+    font-family: 'Arial', sans-serif;
 }
 
 body {
-    background-color: #0d0d0d;
-    color: #e0e0e0;
+    background-color: #000000;
+    color: #ffffff;
     text-align: center;
 }
 
-/* NAVBAR */
+/* Navigation Bar */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 10%;
-    background: rgba(20, 20, 20, 0.9);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+    padding: 20px 50px;
+    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
 }
 
-.logo {
-    font-size: 22px;
-    font-weight: 700;
-    color: #00bcd4;
-    font-family: 'Montserrat', sans-serif;
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 nav ul {
-    list-style: none;
     display: flex;
-    gap: 30px;
+    list-style: none;
 }
 
 nav ul li {
-    display: inline;
+    margin: 0 15px;
 }
 
 nav ul li a {
+    color: white;
     text-decoration: none;
-    color: #00bcd4;
-    font-size: 16px;
-    font-weight: 600;
-    padding: 6px 12px;
-    border-radius: 5px;
-    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    transition: 0.3s;
 }
 
-/* Remove underlight, add soft highlight */
 nav ul li a:hover {
-    background: rgba(0, 188, 212, 0.2);
-    color: #ffffff;
+    text-shadow: 0px 0px 10px white;
 }
 
-/* HERO SECTION */
+/* Hero Section */
 header {
-    background: url('your-header-bg.jpg') no-repeat center center/cover;
-    height: 350px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    text-align: center;
-    margin-top: 70px;
-}
-
-/* HERO TEXT */
-.hero-content {
-    max-width: 800px;
+    align-items: center;
+    height: 80vh;
+    background: #000000;
 }
 
 .hero-content h1 {
-    font-size: 38px;
-    font-weight: 800;
-    color: #00bcd4;
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 1px;
+    font-size: 50px;
     text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
 }
 
 .hero-content p {
     font-size: 18px;
-    color: #bbbbbb;
-    font-weight: 500;
     margin-top: 10px;
-    font-family: 'Roboto Mono', monospace;
 }
 
-/* SECTIONS */
+/* Sections */
 section {
-    padding: 90px 10%;
-    min-height: 400px;
+    padding: 60px 20px;
 }
 
-/* CONTENT BOX */
 .container {
-    max-width: 850px;
+    max-width: 900px;
     margin: auto;
-    background: rgba(30, 30, 30, 0.9);
-    padding: 25px;
-    border-radius: 14px;
-    box-shadow: 0px 4px 15px rgba(0, 188, 212, 0.2);
 }
 
-/* HEADINGS */
 h2 {
-    font-size: 30px;
-    font-weight: 800;
+    font-size: 32px;
     margin-bottom: 20px;
-    color: #00bcd4;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
+    text-shadow: 0 0 15px white;
 }
 
-/* BODY TEXT */
-p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #ccc;
-    font-family: 'Roboto Mono', monospace;
+/* Stats Grid */
+.stats-grid {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
 }
 
-/* CONTACT BUTTON */
-button {
-    background: #00bcd4;
-    color: #fff;
-    padding: 12px 24px;
-    border: none;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 6px;
+.stat {
+    font-size: 24px;
+}
+
+/* Games Section */
+.games-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.game {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
-    font-family: 'Montserrat', sans-serif;
+    transition: 0.3s;
 }
 
-/* Button slight hover pop effect */
-button:hover {
-    background: #0097a7;
+.game:hover {
     transform: scale(1.05);
+    box-shadow: 0 0 20px white;
+}
+
+.game img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.game-info {
+    margin-top: 10px;
+}
+
+/* Contact Button */
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.8);
 }
