@@ -162,3 +162,41 @@ button:hover {
     transform: scale(1.05);
     background: linear-gradient(135deg, #ff4747, #ff8b8b);
 }
+
+/* Our Games Section */
+.games-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.game {
+    background: rgba(30, 30, 30, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 12px;
+    width: 220px;
+    box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    text-align: center;
+}
+
+.game:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.5);
+}
+
+.game img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.game h3 {
+    font-size: 18px;
+    color: #ffcc00;
+    font-weight: bold;
+}
