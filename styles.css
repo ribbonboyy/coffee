@@ -1,53 +1,89 @@
-/* GENERAL RESET */
+/* RESET STYLES */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: #0d0d0d; /* Deep black */
-    color: #e0e0e0; /* Soft white */
+    background-color: #0d0d0d;
+    color: #e0e0e0;
     text-align: center;
 }
 
-/* NAVBAR (Fixing That Mess 💀) */
+/* NAVBAR FIX */
 nav {
     display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 20px 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
     background: rgba(20, 20, 20, 0.9);
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 999;
+    z-index: 1000;
     backdrop-filter: blur(10px);
 }
 
-nav a {
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #00bcd4;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
     text-decoration: none;
-    color: #00bcd4; /* Cool cyan */
+    color: #00bcd4;
     font-size: 16px;
     font-weight: 600;
     transition: color 0.3s ease-in-out;
 }
 
-nav a:hover {
+nav ul li a:hover {
     color: #ffffff;
 }
 
-/* SECTION HEADINGS */
-h2 {
-    font-size: 28px;
-    font-weight: 700;
-    margin: 80px 0 20px;
-    color: #00bcd4; /* Cyan accent */
+/* HERO SECTION */
+header {
+    background: url('your-header-bg.jpg') no-repeat center center/cover;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 60px;
 }
 
-/* WHO WE ARE SECTION */
-.about-container {
+.hero-content h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #00bcd4;
+}
+
+.hero-content p {
+    font-size: 16px;
+    color: #ccc;
+}
+
+/* SECTIONS */
+section {
+    padding: 80px 10%;
+    min-height: 400px;
+}
+
+.container {
     max-width: 800px;
     margin: auto;
     background: rgba(30, 30, 30, 0.8);
@@ -56,16 +92,23 @@ h2 {
     box-shadow: 0px 0px 15px rgba(0, 188, 212, 0.3);
 }
 
-/* STATS SECTION */
-.stats-container {
+h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #00bcd4;
+}
+
+/* STATS */
+.stats-grid {
     display: flex;
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
-.stat-box {
+.stat {
     background: rgba(20, 20, 20, 0.8);
     padding: 20px;
     border-radius: 12px;
@@ -74,23 +117,23 @@ h2 {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.stat-box:hover {
+.stat:hover {
     transform: translateY(-5px);
     box-shadow: 0px 0px 20px rgba(0, 188, 212, 0.5);
 }
 
-.stat-box h3 {
+.stat h3 {
     font-size: 22px;
     color: #00bcd4;
     font-weight: bold;
 }
 
-.stat-box p {
+.stat p {
     font-size: 14px;
     color: #bbb;
 }
 
-/* OUR GAMES (Horizontal & Not Ugly Now 💀) */
+/* GAMES LIST */
 .games-list {
     display: flex;
     justify-content: center;
@@ -136,4 +179,21 @@ h2 {
 .game-info p {
     font-size: 13px;
     color: #bbb;
+}
+
+/* CONTACT */
+button {
+    background: #00bcd4;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #0097a7;
 }
