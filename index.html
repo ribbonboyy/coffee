@@ -1,199 +1,115 @@
-/* RESET STYLES */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrettyFunny.Online</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function copyDiscord() {
+            navigator.clipboard.writeText("mink.org");
+            alert("Discord copied: mink.org");
+        }
+    </script>
+</head>
+<body>
 
-body {
-    background-color: #0d0d0d;
-    color: #e0e0e0;
-    text-align: center;
-}
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">PrettyFunny.Online</div>
+        <ul>
+            <li><a href="#about">Who We Are</a></li>
+            <li><a href="#stats">Stats</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#games">Our games</a></li>
+        </ul>
+    </nav>
 
-/* NAVBAR FIX */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 10%;
-    background: rgba(20, 20, 20, 0.9);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    backdrop-filter: blur(10px);
-}
+    <!-- Hero Section -->
+    <header>
+        <div class="hero-content">
+            <h1>We Create, Sell & Buy Roblox Games</h1>
+            <p>We have some games with solid numbers under our belt.</p>
+        </div>
+    </header>
 
-.logo {
-    font-size: 20px;
-    font-weight: bold;
-    color: #00bcd4;
-}
+    <!-- About Us -->
+    <section id="about">
+        <div class="container">
+            <h2>Who We Are</h2>
+            <p>
+                Welcome to PrettyFunny.Online, a dynamic collective of game developers, traders, and visionaries 
+                shaping the future of Roblox entertainment. Whether you're a creator looking to sell your masterpiece 
+                or a player searching for the next big hit, we’ve got you covered.
+            </p>
+        </div>
+    </section>
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
+    <!-- Stats -->
+    <section id="stats">
+        <div class="container">
+            <h2>Our Stats</h2>
+            <div class="stats-grid">
+                <div class="stat">
+                    <h3>100,300+</h3>
+                    <p>Monthly Active Users</p>
+                </div>
+                <div class="stat">
+                    <h3>3,000,000+</h3>
+                    <p>Total Visits</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-nav ul li {
-    display: inline;
-}
+    <!-- Our Games Section -->
+<section id="games">
+    <div class="container">
+        <h2>Our Games</h2>
+        <div class="games-list">
+            <div class="game" onclick="window.open('https://www.roblox.com/games/135132412582970', '_blank')">
+                <img src="noFilter (5).png" alt="Fling">
+                <div class="game-info">
+                    <h3>Fling</h3>
+                    <p>A chaotic fun experience where you fling players across the map!</p>
+                </div>
+            </div>
 
-nav ul li a {
-    text-decoration: none;
-    color: #00bcd4;
-    font-size: 16px;
-    font-weight: 600;
-    transition: color 0.3s ease-in-out;
-}
+            <div class="game" onclick="window.open('https://www.roblox.com/games/123577460957402', '_blank')">
+                <img src="noFilter (4).png" alt="Please Donate">
+                <div class="game-info">
+                    <h3>Please Donate</h3>
+                    <p>Support your favorite creators by donating Robux!</p>
+                </div>
+            </div>
 
-nav ul li a:hover {
-    color: #ffffff;
-}
+            <div class="game" onclick="window.open('https://www.roblox.com/games/17078468178', '_blank')">
+                <img src="asdasdasdasdasdadddds.png" alt="Can't Say the Letter">
+                <div class="game-info">
+                    <h3>Can't Say the Letter</h3>
+                    <p>A word game where you must avoid saying certain letters.</p>
+                </div>
+            </div>
 
-/* HERO SECTION */
-header {
-    background: url('your-header-bg.jpg') no-repeat center center/cover;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-top: 60px;
-}
+            <div class="game" onclick="window.open('https://www.roblox.com/games/17253123972', '_blank')">
+                <img src="fdshfdg.png" alt="Fun Easy Obby">
+                <div class="game-info">
+                    <h3>Fun Easy Obby</h3>
+                    <p>Jump, run, and complete fun obstacles in this easy obby.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-.hero-content h1 {
-    font-size: 32px;
-    font-weight: 700;
-    color: #00bcd4;
-}
+    <!-- Contact -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Want to collaborate? Get in touch!</p>
+            <button onclick="copyDiscord()">Copy Discord: mink.org</button>
+        </div>
+    </section>
 
-.hero-content p {
-    font-size: 16px;
-    color: #ccc;
-}
-
-/* SECTIONS */
-section {
-    padding: 80px 10%;
-    min-height: 400px;
-}
-
-.container {
-    max-width: 800px;
-    margin: auto;
-    background: rgba(30, 30, 30, 0.8);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0px 0px 15px rgba(0, 188, 212, 0.3);
-}
-
-h2 {
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #00bcd4;
-}
-
-/* STATS */
-.stats-grid {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-
-.stat {
-    background: rgba(20, 20, 20, 0.8);
-    padding: 20px;
-    border-radius: 12px;
-    min-width: 200px;
-    text-align: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.stat:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 0px 20px rgba(0, 188, 212, 0.5);
-}
-
-.stat h3 {
-    font-size: 22px;
-    color: #00bcd4;
-    font-weight: bold;
-}
-
-.stat p {
-    font-size: 14px;
-    color: #bbb;
-}
-
-/* GAMES LIST */
-.games-list {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-/* GAME CARDS */
-.game {
-    background: rgba(30, 30, 30, 0.8);
-    padding: 15px;
-    border-radius: 12px;
-    width: 220px;
-    text-align: center;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    cursor: pointer;
-}
-
-.game:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 0px 20px rgba(0, 188, 212, 0.5);
-}
-
-/* GAME IMAGE */
-.game img {
-    width: 160px;
-    height: 160px;
-    border-radius: 10px;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-
-/* GAME INFO */
-.game-info h3 {
-    font-size: 16px;
-    color: #00bcd4;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.game-info p {
-    font-size: 13px;
-    color: #bbb;
-}
-
-/* CONTACT */
-button {
-    background: #00bcd4;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
-}
-
-button:hover {
-    background: #0097a7;
-}
+</body>
+</html>
