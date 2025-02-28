@@ -1,99 +1,100 @@
-/* Dark gradient background */
+/* Dark Futuristic Background */
 body {
     font-family: 'Poppins', sans-serif;
-    background: radial-gradient(circle at center, #0f0f10, #090909);
+    background: radial-gradient(circle at center, #0c0d10, #060606);
     color: white;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
 }
 
-/* Navbar */
+/* Navigation Bar (Glassmorphism) */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 60px; /* Less padding for a tighter look */
-    background: rgba(15, 15, 15, 0.85);
-    backdrop-filter: blur(10px);
-    border-bottom: 3px dashed rgba(255, 255, 255, 0.25);
+    padding: 15px 50px;
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s;
+}
+
+nav:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* Navbar Links */
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
 }
 
 /* Hero Section */
 header {
     text-align: center;
-    padding: 90px 30px; /* Reduced padding */
+    padding: 120px 30px;
 }
 
 .hero-content h1 {
-    font-size: 60px; /* Slightly reduced for better spacing */
+    font-size: 60px;
     font-weight: bold;
     background: linear-gradient(90deg, #71c0ff, #a67eff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 20px; /* Add spacing */
+    text-shadow: 2px 2px 12px rgba(113, 192, 255, 0.5);
 }
 
 .hero-content p {
     font-size: 22px;
     opacity: 0.85;
     max-width: 750px;
-    margin: 10px auto; /* Add some margin to separate text */
+    margin: 15px auto;
     line-height: 1.5;
-}
-
-/* Section Styles */
-section {
-    text-align: center;
-    padding: 70px 30px; /* Adjusted padding */
-}
-
-/* Container */
-.container {
-    max-width: 1100px;
-    margin: auto;
 }
 
 /* Stats Section */
 .stats-grid {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Ensures proper stacking on smaller screens */
-    gap: 40px; /* Reduced gap */
+    flex-wrap: wrap;
+    gap: 40px;
     margin-top: 30px;
 }
 
 .stat {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 35px; /* Slightly smaller padding */
+    background: rgba(255, 255, 255, 0.08);
+    padding: 35px;
     border-radius: 12px;
-    border: 3px dashed rgba(255, 255, 255, 0.35);
-    transition: transform 0.3s, background 0.3s;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, background 0.3s ease;
     width: 280px;
     text-align: center;
 }
 
 .stat:hover {
-    transform: scale(1.07);
+    transform: scale(1.05);
     background: rgba(255, 255, 255, 0.15);
 }
 
-.stat h3 {
-    font-size: 32px;
-    color: #71c0ff;
-}
-
-.stat p {
-    font-size: 26px;
-    font-weight: bold;
-    opacity: 0.9;
-}
-
-/* Game Section */
+/* Game Cards */
 .games-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 25px; /* Reduced spacing */
+    gap: 25px;
     margin-top: 40px;
 }
 
@@ -103,39 +104,19 @@ section {
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.3s ease, background 0.3s ease;
-    border: 3px dashed rgba(255, 255, 255, 0.35);
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .game:hover {
-    transform: scale(1.06);
+    transform: scale(1.05);
     background: rgba(255, 255, 255, 0.15);
 }
 
-.game img {
-    width: 100%;
-    height: 180px; /* Adjusted for better proportions */
-    object-fit: cover;
-}
-
-.game-info {
-    padding: 20px;
-}
-
-.game-info h3 {
-    font-size: 24px;
-    color: #71c0ff;
-}
-
-.game-info p {
-    font-size: 18px;
-    opacity: 0.8;
-}
-
-/* Contact Section */
+/* Buttons */
 button {
     padding: 14px 28px;
-    background: rgba(113, 192, 255, 0.3);
-    border: 3px dashed #71c0ff;
+    background: linear-gradient(90deg, rgba(113, 192, 255, 0.3), rgba(166, 126, 255, 0.3));
+    border: none;
     color: white;
     font-size: 18px;
     font-weight: bold;
@@ -145,7 +126,7 @@ button {
 }
 
 button:hover {
-    background: rgba(113, 192, 255, 0.5);
+    background: linear-gradient(90deg, rgba(113, 192, 255, 0.5), rgba(166, 126, 255, 0.5));
     transform: scale(1.05);
 }
 
@@ -178,12 +159,7 @@ button:hover {
     nav {
         flex-direction: column;
         text-align: center;
-        padding: 20px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 15px;
+        padding: 15px;
     }
 
     .stats-grid {
