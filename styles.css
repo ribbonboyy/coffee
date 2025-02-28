@@ -61,19 +61,57 @@ header {
 header h1 {
     font-size: 50px;
     font-weight: bold;
+/* Who We Are - Styled with pop */
+#about {
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
 }
 
-/* About Section */
-.container {
-    width: 80%;
-    margin: auto;
-    padding: 60px 0;
-}
-
-h2 {
-    font-size: 32px;
+#about h2 {
+    font-size: 40px;
     font-weight: bold;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
 }
+
+#about h2::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 4px;
+    background: #71c0ff;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    border-radius: 4px;
+    box-shadow: 0px 0px 12px rgba(113, 192, 255, 0.8);
+}
+
+#about p {
+    font-size: 18px;
+    font-weight: 500;
+    max-width: 900px;
+    margin: 20px auto;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /* Stats */
 .stats-grid {
