@@ -13,14 +13,14 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
+    padding: 25px 80px;  /* Increased padding */
     background: rgba(15, 15, 15, 0.8);
-    backdrop-filter: blur(10px);
-    border-bottom: 2px dashed rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    border-bottom: 3px dashed rgba(255, 255, 255, 0.3);
 }
 
 nav .logo {
-    font-size: 24px;
+    font-size: 32px; /* Bigger logo */
     font-weight: bold;
     text-transform: uppercase;
     color: #71c0ff;
@@ -29,35 +29,32 @@ nav .logo {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
-}
-
-nav ul li {
-    display: inline;
+    gap: 30px; /* Increased spacing */
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
-    font-weight: 500;
+    font-size: 20px; /* Bigger text */
+    font-weight: 600;
+    padding: 12px 20px; /* Bigger clickable area */
+    border-radius: 8px;
     transition: 0.3s;
-    padding: 8px 16px;
-    border-radius: 5px;
 }
 
 nav ul li a:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
 }
 
 /* Hero Section */
 header {
     text-align: center;
-    padding: 80px 20px;
-    border-bottom: 2px dashed rgba(255, 255, 255, 0.2);
+    padding: 120px 40px; /* More padding */
+    border-bottom: 3px dashed rgba(255, 255, 255, 0.3);
 }
 
 .hero-content h1 {
-    font-size: 50px;
+    font-size: 64px; /* Larger headline */
     font-weight: bold;
     background: linear-gradient(90deg, #71c0ff, #a67eff);
     -webkit-background-clip: text;
@@ -65,19 +62,21 @@ header {
 }
 
 .hero-content p {
-    font-size: 18px;
-    opacity: 0.8;
+    font-size: 22px; /* Bigger text */
+    opacity: 0.85;
+    max-width: 800px;
+    margin: auto;
 }
 
 /* Section Styles */
 section {
     text-align: center;
-    padding: 60px 20px;
-    border-bottom: 2px dashed rgba(255, 255, 255, 0.2);
+    padding: 80px 40px; /* More spacing */
+    border-bottom: 3px dashed rgba(255, 255, 255, 0.3);
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1100px; /* Bigger content width */
     margin: auto;
 }
 
@@ -85,110 +84,115 @@ section {
 .stats-grid {
     display: flex;
     justify-content: center;
-    gap: 50px;
-    margin-top: 30px;
+    gap: 60px; /* More spacing */
+    margin-top: 40px;
 }
 
 .stat {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 20px;
-    border-radius: 10px;
-    border: 2px dashed rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.08);
+    padding: 40px; /* Bigger box */
+    border-radius: 15px;
+    border: 3px dashed rgba(255, 255, 255, 0.4);
     transition: transform 0.3s;
+    width: 300px; /* Make sure it's large */
 }
 
 .stat:hover {
-    transform: scale(1.05);
+    transform: scale(1.07);
 }
 
 .stat h3 {
-    font-size: 30px;
+    font-size: 36px; /* Bigger headings */
     color: #71c0ff;
 }
 
 .stat p {
-    font-size: 16px;
-    opacity: 0.7;
+    font-size: 28px; /* Bigger numbers */
+    font-weight: bold;
+    opacity: 0.9;
 }
 
 /* Game Section */
 .games-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Bigger game cards */
+    gap: 30px;
+    margin-top: 50px;
 }
 
 .game {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
     overflow: hidden;
     cursor: pointer;
     transition: 0.3s;
-    border: 2px dashed rgba(255, 255, 255, 0.3);
+    border: 3px dashed rgba(255, 255, 255, 0.4);
 }
 
 .game:hover {
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
 
 .game img {
     width: 100%;
-    height: 150px;
+    height: 200px; /* Bigger images */
     object-fit: cover;
 }
 
 .game-info {
-    padding: 15px;
+    padding: 20px;
 }
 
 .game-info h3 {
-    font-size: 20px;
+    font-size: 24px; /* Bigger titles */
     color: #71c0ff;
 }
 
 .game-info p {
-    font-size: 14px;
-    opacity: 0.7;
+    font-size: 18px;
+    opacity: 0.8;
 }
 
 /* Contact Section */
 button {
-    padding: 12px 24px;
-    background: rgba(113, 192, 255, 0.2);
-    border: 2px dashed #71c0ff;
+    padding: 16px 32px; /* Bigger buttons */
+    background: rgba(113, 192, 255, 0.3);
+    border: 3px dashed #71c0ff;
     color: white;
-    font-size: 16px;
+    font-size: 20px; /* Bigger text */
+    font-weight: bold;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 10px;
     transition: 0.3s;
 }
 
 button:hover {
-    background: rgba(113, 192, 255, 0.4);
-    transform: scale(1.05);
+    background: rgba(113, 192, 255, 0.5);
+    transform: scale(1.08);
 }
 
 /* Floating Buttons */
 .floating-buttons {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 30px;
+    right: 30px;
     display: flex;
-    gap: 10px;
+    gap: 15px; /* Bigger spacing */
 }
 
 .floating-buttons a {
     text-decoration: none;
     color: white;
-    padding: 12px 20px;
-    background: rgba(113, 192, 255, 0.2);
-    border-radius: 5px;
+    padding: 16px 28px; /* Bigger buttons */
+    background: rgba(113, 192, 255, 0.3);
+    border-radius: 8px;
+    font-size: 18px;
     transition: 0.3s;
 }
 
 .floating-buttons a:hover {
-    background: rgba(113, 192, 255, 0.4);
+    background: rgba(113, 192, 255, 0.5);
+    transform: scale(1.08);
 }
 
 /* Responsive */
@@ -196,19 +200,32 @@ button:hover {
     nav {
         flex-direction: column;
         text-align: center;
+        padding: 30px;
     }
 
     nav ul {
         flex-direction: column;
-        padding-top: 10px;
+        padding-top: 15px;
     }
 
     .stats-grid {
         flex-direction: column;
-        gap: 20px;
+        gap: 30px;
     }
 
     .games-list {
         grid-template-columns: 1fr;
+    }
+
+    .stat {
+        width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 48px; /* Adjusted for mobile */
+    }
+
+    .hero-content p {
+        font-size: 20px;
     }
 }
