@@ -13,62 +13,69 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 60px; /* Reduced padding */
-    background: rgba(15, 15, 15, 0.8);
-    backdrop-filter: blur(12px);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 20px 60px; /* Less padding for a tighter look */
+    background: rgba(15, 15, 15, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 3px dashed rgba(255, 255, 255, 0.25);
 }
 
 /* Hero Section */
 header {
     text-align: center;
-    padding: 80px 30px; /* Reduced padding */
+    padding: 90px 30px; /* Reduced padding */
 }
 
 .hero-content h1 {
-    font-size: 56px; /* Slightly smaller */
+    font-size: 60px; /* Slightly reduced for better spacing */
     font-weight: bold;
     background: linear-gradient(90deg, #71c0ff, #a67eff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 15px; /* Added spacing */
+    margin-bottom: 20px; /* Add spacing */
 }
 
 .hero-content p {
-    font-size: 20px;
+    font-size: 22px;
     opacity: 0.85;
-    max-width: 700px;
-    margin: 0 auto; /* Centered */
-    padding-bottom: 20px; /* Adjusted spacing */
+    max-width: 750px;
+    margin: 10px auto; /* Add some margin to separate text */
+    line-height: 1.5;
 }
 
 /* Section Styles */
 section {
     text-align: center;
-    padding: 60px 30px; /* Reduced padding */
+    padding: 70px 30px; /* Adjusted padding */
 }
 
 /* Container */
 .container {
-    max-width: 1000px; /* Slightly reduced */
-    margin: 0 auto;
+    max-width: 1100px;
+    margin: auto;
 }
 
 /* Stats Section */
 .stats-grid {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Ensures proper stacking on smaller screens */
     gap: 40px; /* Reduced gap */
-    margin-top: 30px; /* Adjusted */
+    margin-top: 30px;
 }
 
 .stat {
-    background: rgba(255, 255, 255, 0.08);
-    padding: 30px; /* Adjusted */
+    background: rgba(255, 255, 255, 0.1);
+    padding: 35px; /* Slightly smaller padding */
     border-radius: 12px;
-    border: 2px solid rgba(255, 255, 255, 0.3); /* Solid border */
-    transition: transform 0.3s;
-    width: 280px; /* Adjusted */
+    border: 3px dashed rgba(255, 255, 255, 0.35);
+    transition: transform 0.3s, background 0.3s;
+    width: 280px;
+    text-align: center;
+}
+
+.stat:hover {
+    transform: scale(1.07);
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .stat h3 {
@@ -77,7 +84,7 @@ section {
 }
 
 .stat p {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
     opacity: 0.9;
 }
@@ -85,8 +92,8 @@ section {
 /* Game Section */
 .games-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Adjusted */
-    gap: 20px; /* Reduced spacing */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px; /* Reduced spacing */
     margin-top: 40px;
 }
 
@@ -95,29 +102,75 @@ section {
     border-radius: 12px;
     overflow: hidden;
     cursor: pointer;
-    transition: 0.3s;
-    border: 2px solid rgba(255, 255, 255, 0.3); /* Solid border */
+    transition: transform 0.3s ease, background 0.3s ease;
+    border: 3px dashed rgba(255, 255, 255, 0.35);
+}
+
+.game:hover {
+    transform: scale(1.06);
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .game img {
     width: 100%;
-    height: 180px; /* Adjusted */
+    height: 180px; /* Adjusted for better proportions */
     object-fit: cover;
+}
+
+.game-info {
+    padding: 20px;
+}
+
+.game-info h3 {
+    font-size: 24px;
+    color: #71c0ff;
+}
+
+.game-info p {
+    font-size: 18px;
+    opacity: 0.8;
 }
 
 /* Contact Section */
 button {
     padding: 14px 28px;
     background: rgba(113, 192, 255, 0.3);
-    border: 2px solid #71c0ff;
+    border: 3px dashed #71c0ff;
+    color: white;
     font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
     border-radius: 8px;
-    transition: 0.3s;
+    transition: transform 0.3s, background 0.3s;
 }
 
 button:hover {
     background: rgba(113, 192, 255, 0.5);
     transform: scale(1.05);
+}
+
+/* Floating Buttons */
+.floating-buttons {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.floating-buttons a {
+    text-decoration: none;
+    color: white;
+    padding: 14px 24px;
+    background: rgba(113, 192, 255, 0.3);
+    border-radius: 8px;
+    font-size: 18px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.floating-buttons a:hover {
+    background: rgba(113, 192, 255, 0.5);
+    transform: scale(1.07);
 }
 
 /* Responsive Fixes */
@@ -128,20 +181,29 @@ button:hover {
         padding: 20px;
     }
 
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
     .stats-grid {
         flex-direction: column;
-        gap: 20px;
+        gap: 25px;
     }
 
     .games-list {
         grid-template-columns: 1fr;
     }
 
+    .stat {
+        width: 100%;
+    }
+
     .hero-content h1 {
-        font-size: 44px;
+        font-size: 48px;
     }
 
     .hero-content p {
-        font-size: 18px;
+        font-size: 20px;
     }
 }
