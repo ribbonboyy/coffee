@@ -1,4 +1,6 @@
 /* ===== General Styles ===== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono:wght@300;500&display=swap');
+
 body {
     font-family: 'Montserrat', sans-serif;
     background: #0a0a0a;
@@ -8,7 +10,7 @@ body {
     overflow-x: hidden;
 }
 
-/* ===== Navbar ===== */
+/* ===== Navigation Bar ===== */
 nav {
     display: flex;
     justify-content: space-between;
@@ -16,6 +18,33 @@ nav {
     padding: 20px 60px;
     background: rgba(10, 10, 10, 0.95);
     border-bottom: 3px dashed rgba(255, 255, 255, 0.3);
+}
+
+nav .logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: white;
 }
 
 /* ===== Hero Section ===== */
@@ -38,7 +67,29 @@ header {
     opacity: 0.8;
 }
 
+/* ===== About Section ===== */
+#about {
+    padding: 60px;
+    text-align: center;
+    border-top: 3px dashed rgba(255, 255, 255, 0.3);
+}
+
+.about-container h2 {
+    font-size: 32px;
+}
+
+.about-text {
+    font-family: 'Roboto Mono', monospace;
+    opacity: 0.8;
+}
+
 /* ===== Stats Section ===== */
+#stats {
+    text-align: center;
+    padding: 60px;
+    border-top: 3px dashed rgba(255, 255, 255, 0.3);
+}
+
 .stats-grid {
     display: flex;
     justify-content: center;
@@ -89,7 +140,47 @@ header {
     100% { transform: translateY(20px) rotate(360deg); }
 }
 
-/* ===== Buttons ===== */
+/* ===== Our Games Section ===== */
+#games {
+    text-align: center;
+    padding: 60px;
+    border-top: 3px dashed rgba(255, 255, 255, 0.3);
+}
+
+.games-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.game {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 15px;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.game img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.game:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* ===== Contact Section ===== */
+#contact {
+    text-align: center;
+    padding: 60px;
+    border-top: 3px dashed rgba(255, 255, 255, 0.3);
+}
+
 button {
     padding: 14px 28px;
     background: rgba(113, 192, 255, 0.3);
@@ -114,6 +205,11 @@ button:hover {
         text-align: center;
     }
 
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
     .stats-grid {
         flex-direction: column;
         gap: 25px;
@@ -125,5 +221,10 @@ button:hover {
 
     .hero-content h1 {
         font-size: 46px;
+    }
+
+    .games-list {
+        flex-direction: column;
+        align-items: center;
     }
 }
